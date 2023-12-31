@@ -1,25 +1,27 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import styles from "../style";
 const navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [login, setlogin] = useState(false);
+  let location = useLocation();
 
+useEffect(()=>{
+  
+  console.log(location.pathname);
+
+},[location])
   return (
     <div className="sticky top-0 z-10 p-2 ">
       <nav class="bg-white shadow-xl rounded dark:bg-white">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="https://flowbite.com/"
-            class="flex items-center space-x-3 rtl:space-x-reverse"
-          >
+       
             <img
               src="../../src/assets/6.png"
               className="w-20 h-12 self-center text-2xl font-semibold whitespace-nowrap dark:text-black"
               alt=""
             />
-          </a>
 
           <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {login ? (
@@ -146,7 +148,7 @@ const navbar = () => {
                   href="#"
                   class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] md:hover:bg-transparent md:hover:text-[#fe6019] md:p-0 dark:text-black md:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black md:dark:hover:bg-transparent dark:border--[#fe6019]"
                 >
-                  <NavLink to="about">About</NavLink>
+                  <NavLink to="/about">About</NavLink>
                 </a>
               </li>
               <li>
