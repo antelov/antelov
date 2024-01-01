@@ -25,14 +25,14 @@ const SignUp = () => {
           </div>
           <div>
             <img
-              src="../../src/assets/sign_In-removebg-preview 1.svg"
-              className="  absolute w-[300px]  z-10 right-[-140px] top-2 "
+              src="../../src/assets/characteredited.svg"
+              className="  absolute w-[140px]  z-10 right-[-140px] top-0 "
               alt=""
             />
           </div>
         </div>
         {/*   input type "SignUp" */}
-        <div className="w-screen flex flex-col justify-center items-center">
+        <div className="w-screen flex flex-col justify-center items-center ">
           <BlueInput w={260} h={40} inputName="Username" />
           <BlueInput w={260} h={40} inputName="Phone number" />{" "}
           <BlueInput w={260} h={40} inputName="Email adress" />

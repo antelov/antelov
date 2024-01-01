@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import styles from "../style";
 import LoginPage from "./LoginPage";
 import SignUp from "./SignUp";
-
+import SignInMover from "./SignInMover"
 const home = () => {
   useEffect(() => {
     AOS.init();
@@ -17,7 +17,7 @@ const home = () => {
 
   return (
     <div className=" " data-aos="fade-up">
-      <SignUp />
+      < SignInMover />
       {/* <span className=" bg-[url('../../src/assets/src/assets/background_art.svg')] w-5 h-8 "></span>
       <div className="row relative z-10 justify-center px-7 pb-10 pt-20 2xl:px-48 items-center ">
         <h1 className=" mb-12 text-center text-h2-sm font-medium lg:text-5xl ">
