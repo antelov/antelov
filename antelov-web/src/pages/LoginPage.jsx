@@ -26,7 +26,7 @@ const LoginPage = () => {
           <img
             src="../../src/assets/character.svg"
             alt=" "
-            className="w-[500px]  xs:mt-[100px]"
+            className="w-[500px]   xs:mt-[100px]"
           />
         </div>
       </div>
