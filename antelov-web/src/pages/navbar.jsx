@@ -7,27 +7,24 @@ const navbar = () => {
   const [login, setlogin] = useState(false);
   let location = useLocation();
 
-useEffect(()=>{
-  
-  console.log(location.pathname);
-
-},[location])
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location]);
   return (
     <div className="sticky top-0 z-10 p-2 ">
       <nav class="bg-white shadow-xl rounded dark:bg-white">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-       
-            <img
-              src="../../src/assets/6.png"
-              className="w-20 h-12 self-center text-2xl font-semibold whitespace-nowrap dark:text-black"
-              alt=""
-            />
+          <img
+            src="../../src/assets/6.png"
+            className="w-20 h-12 self-center text-2xl font-semibold whitespace-nowrap dark:text-black"
+            alt=""
+          />
 
-          <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <div class="flex items-center lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
             {login ? (
               <button
                 type="button"
-                class="flex text-sm bg-gray-200 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 "
+                class="flex text-sm bg-gray-200 rounded-full lg:me-0 focus:ring-4 focus:ring-gray-300 "
                 id="user-menu-button"
                 aria-expanded="false"
                 data-dropdown-toggle="user-dropdown"
@@ -45,7 +42,7 @@ useEffect(()=>{
               <div className={`flex justify-around w-40  font-medium `}>
                 <a
                   href="#"
-                  class="block py-2 px-3  text-black  rounded md:bg-transparent hover:text-[#fe6019]  md:text-black md:p-0 md:dark:text-black"
+                  class="block py-2 px-3  text-black  rounded lg:bg-transparent hover:text-[#fe6019]  lg:text-black lg:p-0 lg:dark:text-black"
                   aria-current="page"
                 >
                   <NavLink to="/login">Login / register</NavLink>
@@ -107,7 +104,7 @@ useEffect(()=>{
             <button
               data-collapse-toggle="navbar-user"
               type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg--[#fe6019] dark:focus:ring-gray-600"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg--[#fe6019] dark:focus:ring-gray-600"
               aria-controls="navbar-user"
               aria-expanded="false"
             >
@@ -130,14 +127,14 @@ useEffect(()=>{
             </button>
           </div>
           <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
             id="navbar-user"
           >
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-white dark:border--[#fe6019]">
+            <ul class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-white dark:border--[#fe6019]">
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-black  rounded md:bg-transparent hover:text-[#fe6019]  md:text-black md:p-0 md:dark:text-black"
+                  class="block py-2 px-3 text-black  rounded lg:bg-transparent hover:text-[#fe6019]  lg:text-black lg:p-0 lg:dark:text-black"
                   aria-current="page"
                 >
                   <NavLink to="/">Home</NavLink>
@@ -146,7 +143,7 @@ useEffect(()=>{
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] md:hover:bg-transparent md:hover:text-[#fe6019] md:p-0 dark:text-black md:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black md:dark:hover:bg-transparent dark:border--[#fe6019]"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-[#fe6019] lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black lg:dark:hover:bg-transparent dark:border--[#fe6019]"
                 >
                   <NavLink to="/about">About</NavLink>
                 </a>
@@ -154,16 +151,15 @@ useEffect(()=>{
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] md:hover:bg-transparent md:hover:text-[#fe6019] md:p-0 dark:text-black md:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black md:dark:hover:bg-transparent dark:border--[#fe6019]"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-[#fe6019] lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black lg:dark:hover:bg-transparent dark:border--[#fe6019]"
                 >
                   <NavLink to="services">Services</NavLink>
-                  
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] md:hover:bg-transparent md:hover:text-[#fe6019] md:p-0 dark:text-black md:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black md:dark:hover:bg-transparent dark:border--[#fe6019]"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-[#fe6019] lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-[#fe6019] dark:hover:text-black lg:dark:hover:bg-transparent dark:border--[#fe6019]"
                 >
                   <NavLink to="pricing">Pricing</NavLink>
                 </a>
@@ -171,7 +167,7 @@ useEffect(()=>{
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-[#fe6019] dark:hover:bg-white dark:hover:text-black md:dark:hover:bg-white dark:border-[#fe6019]"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-white dark:hover:text-black lg:dark:hover:bg-white dark:border-[#fe6019]"
                 >
                   Contact
                 </a>
