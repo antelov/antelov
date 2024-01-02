@@ -1,14 +1,14 @@
-const blueInput = ({ h, w, inputName }) => {
+const blueInput = ({ h, w, inputName ,type }) => {
   return (
     <div>
       <label
         for="first_name"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white px-2"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white p-2"
       >
         {inputName}
       </label>
       <input
-        type="text"
+        type={type}
         id="first_name"
         class="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:[#2B478BD9]  hover:border-blue-500 block w-full p-2.5 dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:[#2B478BD9] focus:border-blue-gray-200"
         placeholder={inputName}

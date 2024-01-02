@@ -8,7 +8,7 @@ import LoginPage from "./pages/LoginPage";
 import NotFound from "./components/NotFound";
 import SignUp from "./pages/SignUp";
 function App() {
-  const [loged, setloged] = useState(false);
+  const [loged, setloged] = useState(true);
 
   return (
     <>
