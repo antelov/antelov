@@ -21,6 +21,7 @@ class PendingAccounts(models.Model):
     bank_account_number = models.CharField(max_length=50)
     bank_name = models.CharField(max_length=100)
     documents_path = models.CharField(max_length=255)  # Assuming as a string
+    acc_status = models.CharField(max_length=100)
 
 #service providers accounts after verfication( will automatically be added once the service provider is approved)
 class ServiceProvider(models.Model):
@@ -30,6 +31,18 @@ class ServiceProvider(models.Model):
     contact_number = models.CharField(max_length=20)  # Assuming as a string for flexibility
     acc_created_at = models.DateField()
     UEN = models.BigIntegerField()
+
+
+
+class Offer(models.Model):
+    offer_id = models.AutoField(primary_key=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    created_at = models.DateField()
+    description = models.TextField()
+    service_provider_username = models.ForeignKey(ServiceProvider, on_delete=models.CASCADE)
+    status = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
 
 #this table to store posts/requests published by customers
 class Post(models.Model):
@@ -52,6 +65,5 @@ class PostDetails(models.Model):
     number_of_bids = models.IntegerField()
     hired_by = models.CharField(max_length=100, blank=True, null=True)
     bid_price = models.DecimalField(max_digits=10, decimal_places=2)
-
 
 
