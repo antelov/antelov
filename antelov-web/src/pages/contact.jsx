@@ -53,9 +53,9 @@ const contact = () => {
               <PrimaryButton text={" Submit "} w={200} h={40} />
             </div>
           </div>
+          
         </div>
       </div>
-      <Footer />
     </>
   );
 };

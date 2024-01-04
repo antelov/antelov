@@ -9,9 +9,11 @@ import styles from "../style";
 import LoginPage from "./LoginPage";
 import SignUp from "./SignUp";
 import SignInMover from "./SignInMover"
+import SignUpMover from "./SignUpMover"
 import Contact  from './contact'
 import SubmitRequest from "./submitRequest"
 import Footer from './footer'
+
 const home = () => {
   useEffect(() => {
     AOS.init();
@@ -19,10 +21,8 @@ const home = () => {
   }, []);
 
   return (
-    <div className=" " data-aos="fade-up">
-      
-      < SubmitRequest />
-      {/* <span className=" bg-[url('../../src/assets/src/assets/background_art.svg')] w-5 h-8 "></span>
+    <div className="bg-[#FFD9C7] " data-aos="fade-up">
+       <span className=" bg-[url('../../src/assets/src/assets/background_art.svg')] w-5 h-8 "></span>
       <div className="row relative z-10 justify-center px-7 pb-10 pt-20 2xl:px-48 items-center ">
         <h1 className=" mb-12 text-center text-h2-sm font-medium lg:text-5xl ">
           Antelov Your Elegant Moving Solution Gracefully relocate with
@@ -32,8 +32,8 @@ const home = () => {
           <PrimaryButton text={"Register"} w={200} h={40} />
         </div>
         <span className=" bg-[url('../../src/assets/src/assets/background_art.svg')] flex w-8  h-8  "></span>
-      </div> */}
-      {/* <Carousel
+      </div> 
+       <Carousel
         transition={{ duration: 2 }}
         className="rounded-xl top-0 h-[500px]"
         autoplay
@@ -54,10 +54,9 @@ const home = () => {
           alt="image 3"
           className="h-full w-full object-cover"
         />
-      </Carousel> */}
+      </Carousel> 
 
 
-<Footer/>
     </div>
   );
 };
