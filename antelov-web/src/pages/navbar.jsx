@@ -137,7 +137,7 @@ const navbar = () => {
                   class="block py-2 px-3 text-black  rounded lg:bg-transparent hover:text-[#fe6019]  lg:text-black lg:p-0 lg:dark:text-black"
                   aria-current="page"
                 >
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/home">Home</NavLink>
                 </a>
               </li>
               <li>
@@ -165,12 +165,14 @@ const navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-white dark:hover:text-black lg:dark:hover:bg-white dark:border-[#fe6019]"
-                >
-                  Contact
-                </a>
+                <NavLink to="/contact">
+                  <a
+                    href="#"
+                    class="block py-2 px-3 text-gray-900 rounded hover:bg-[#fe6019] lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 dark:text-black lg:dark:hover:text-[#fe6019] dark:hover:bg-white dark:hover:text-black lg:dark:hover:bg-white dark:border-[#fe6019]"
+                  >
+                    Contact
+                  </a>
+                </NavLink>
               </li>
             </ul>
           </div>
