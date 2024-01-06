@@ -44,7 +44,7 @@ class Offer(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
 
-#this table to store posts/requests published by customers
+
 class Post(models.Model):
     post_id = models.AutoField(primary_key=True)
     customer_username = models.CharField(max_length=100)
@@ -65,5 +65,3 @@ class PostDetails(models.Model):
     number_of_bids = models.IntegerField()
     hired_by = models.CharField(max_length=100, blank=True, null=True)
     bid_price = models.DecimalField(max_digits=10, decimal_places=2)
-
-
