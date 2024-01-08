@@ -5,7 +5,6 @@ import BlueInput from "../components/blueInput";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import styles from "../style";
 import LoginPage from "./LoginPage";
 import SignUp from "./SignUp";
 import SignInMover from "./SignInMover"
@@ -26,7 +25,7 @@ const home = () => {
       <div className="row relative z-10 justify-center px-7 pb-10 pt-20 2xl:px-48 items-center ">
         <h1 className=" mb-12 text-center text-h2-sm font-medium lg:text-5xl ">
           Antelov Your Elegant Moving Solution Gracefully relocate with
-          precision and ease
+          precision and eased
         </h1>
         <div className="flex  justify-center">
           <PrimaryButton text={"Register"} w={200} h={40} />
