@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'antelovServer.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "AntelovServer",
+        "NAME": "db1",
         "USER": "admin",
         "PASSWORD": "admin123",
         "HOST": "127.0.0.1",
@@ -146,3 +146,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "core.CustomUser"
