@@ -23,9 +23,9 @@ const footer = () => {
             <h5>+60 5685 8565</h5>
           </a>
         </div>
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400  lg:text-center ">
+        {/* <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400  lg:text-center ">
           © 2024 <a class="hover:underline">ANTELOV</a>. All Rights Reserved.
-        </span>
+        </span> */}
       </div>
     </footer>
   );
