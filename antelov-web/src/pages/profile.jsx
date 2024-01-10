@@ -3,7 +3,7 @@ import BlueInput from "../components/blueInput";
 
 const profile = () => {
   return (
-    <div className="">
+    <div className="bg-[#FFF7F3]">
       <div class="relative flex min-h-screen flex-col justify-center overflow-hidden  py-6 sm:py-12">
         <div class="bg-white max-w-4xl mx-auto w-full">
           <div class="grid grid-cols-6 h-full">
