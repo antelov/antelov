@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 
 const primaryButton = ({ text, w, h }) => {
-  useEffect(() => {
-    console.log("=========>" ,typeof(w), h );
-  }, []);
-   const t = '200'
+
   return (
     <button
       type="button"
