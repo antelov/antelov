@@ -7,18 +7,17 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import NotFound from "./components/NotFound";
 import SignUp from "./pages/SignUp";
-import LandingPage from "./pages/landingPage";
 import SignInMover from "./pages/SignInMover";
 import SignUpMover from "./pages/SignUpMover";
 import Contact from "./pages/contact";
 import Footer from "./pages/footer";
 import Profile from "./pages/profile";
-
+import LandingScreen from "./pages/LandingScreen";
 function App() {
   const [loged, setloged] = useState(false);
 
   return (
-    <>
+    <div className="">
       <BrowserRouter>
         {loged ? (
           <header>
@@ -29,9 +28,9 @@ function App() {
              
           </>
         )}
-        <main className="flex flex-col justify-center items-center w-full  bg-[#FFF7F3] ">
+        <main className="bg-[#FFF7F3] min-h-screen ">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<LandingScreen />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<LoginPage />} />
@@ -43,10 +42,10 @@ function App() {
             {/* Add a wildcard route for unmatched paths */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

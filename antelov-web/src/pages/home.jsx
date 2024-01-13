@@ -4,7 +4,7 @@ import PrimaryButton from "../components/primaryButton";
 import BlueInput from "../components/blueInput";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import LandingPage from "./landingPage";
 import LoginPage from "./LoginPage";
 import SignUp from "./SignUp";
 import SignInMover from "./SignInMover"
@@ -57,6 +57,9 @@ const home = () => {
 
 
     </div>
+    // <>
+    // <LandingPage/>
+    // </>
   );
 };
 

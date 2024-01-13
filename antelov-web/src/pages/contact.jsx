@@ -3,7 +3,7 @@ import Footer from "./footer.jsx";
 const contact = () => {
   return (
     <>
-      <div className="relative w-screen h-screen  flex flex-row  bg-white ">
+      <div className="relative w-11/12 h-screen  flex flex-row  bg-white ">
         <div className=" w-[50%]  flex justify-end items-center">
           <h1 className="absolute   left-[40%] top-24  ">
             Support & administration
