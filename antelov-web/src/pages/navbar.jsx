@@ -38,7 +38,10 @@ const navbar = () => {
                 />
               </button>
             ) : (
-              <div className={`flex justify-around w-40  font-medium `}>
+              <div className={`flex items-center space-x-3  font-poppins font-medium `}>
+                <span className="">120</span>
+                <img src="../../src/assets/coindesignwith$ 1.svg" className="h-8 w-8" alt="" />
+                
                 <a
                   href="#"
                   class="block py-2 px-3  text-black  rounded lg:bg-transparent hover:text-[#fe6019]  lg:text-black lg:p-0 lg:dark:text-black"
