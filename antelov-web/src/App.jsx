@@ -13,8 +13,9 @@ import Contact from "./pages/contact";
 import Footer from "./pages/footer";
 import Profile from "./pages/profile";
 import LandingScreen from "./pages/LandingScreen";
+import RequestSummary from "./pages/RequestSummary";
 function App() {
-  const [loged, setloged] = useState(false);
+  const [loged, setloged] = useState(true);
 
   return (
     <div className="">
@@ -38,11 +39,13 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signupmover" element={<SignUpMover />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/requestsummary" element={<RequestSummary />} />
 
+            
             {/* Add a wildcard route for unmatched paths */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </main>
       </BrowserRouter>
     </div>

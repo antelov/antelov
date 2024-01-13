@@ -2,7 +2,13 @@ import React from "react";
 
 import PrimaryButton from "../components/primaryButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faCheck,
+  fa1,
+  fa2,
+  fa3,
+} from "@fortawesome/free-solid-svg-icons";
 
 const LandingScreen = () => {
   return (
@@ -33,18 +39,36 @@ const LandingScreen = () => {
             <h1 className="text-[#233863] font-poppins text-3xl mt-10 px-20 pt-10">
               We connect Movers to your doorstep
             </h1>
-            <div className="px-28 z-20 font-poppins">
+            <div className="px-28 z-20 font-poppins py-5 ">
               <i>
-                <span className=" h-5 w-5 p-2">
-                  <FontAwesomeIcon icon={faCheck} color="green" size={5} />
+                <span className="  p-2 text-[#008000]">
+                  <FontAwesomeIcon
+                    icon={fa1}
+                    color="green"
+                    size={5}
+                    className="mr-2"
+                  />
+                  .{" "}
                 </span>
                 Describe your need. <br />
-                <span className=" h-5 w-5 p-2">
-                  <FontAwesomeIcon icon={faCheck} color="green" size={5} />
+                <span className="  p-2 text-[#008000]">
+                  <FontAwesomeIcon
+                    icon={fa2}
+                    color="green"
+                    size={5}
+                    className="mr-2"
+                  />
+                  .
                 </span>
                 Post the request. <br />
-                <span className=" h-5 w-5 p-2">
-                  <FontAwesomeIcon icon={faCheck} color="green" size={5} />
+                <span className=" p-2 text-[#008000]">
+                  <FontAwesomeIcon
+                    icon={fa3}
+                    color="green"
+                    size={5}
+                    className="mr-2"
+                  />
+                  .
                 </span>
                 Choose from the bids & offers you <br />
                 receive.
@@ -74,11 +98,12 @@ const LandingScreen = () => {
             Our Services
           </h1>
           <div className="grid grid-cols-4  m-20">
-
-          <div className="bg-red-500 w-5 h-12">d</div>
-          <div className="bg-red-500 w-5 h-12">d</div>
-          <div className="bg-red-500 w-5 h-12">d</div>
-            <div className="bg-red-500 w-5 h-12">d</div>
+            <div className="bg-red-500 w-5 h-12  focus:ring  focus:ring-[#fe702eea]">
+              icon1
+            </div>
+            <div className="bg-red-500 w-5 h-12">icon2</div>
+            <div className="bg-red-500 w-5 h-12">icon3</div>
+            <div className="bg-red-500 w-5 h-12">icon4</div>
           </div>
         </div>
         {/* part 3 */}
@@ -88,8 +113,8 @@ const LandingScreen = () => {
             alt=""
             className="w-[450px]    "
           />
-          <div className="  font-poppins text-[#000000] ">
-            <h1 className="text-2xl">We work with Trusted Movers</h1>
+          <div className="  font-poppins text-[#000000] mr-[200px] ">
+            <h1 className="text-2xl py-4">We work with Trusted Movers</h1>
             <i>
               We partner with Trusted Movers with <br />
               proven track records and credentials. <br />
