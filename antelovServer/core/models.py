@@ -1,61 +1,66 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
+from django.conf import settings
+
+
+
+class CustomUser(AbstractUser):
+    # choices
+    CUST_TYPE = "customer"
+    SERV_PROV_TYPE = "service provider"
+    CUSTOM_USER_TYPE = [
+        (CUST_TYPE, "customer type"),
+        (SERV_PROV_TYPE, "service provider type"),
+    ]
+
+    email = models.EmailField(unique=True)
+    type_user = models.CharField(max_length=20, choices=CUSTOM_USER_TYPE)
 
 #customer table
 class Customer(models.Model):
-    customer_username = models.CharField(primary_key=True, max_length=100)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, related_name="customers")
+    first_name= models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)
     contact_number = models.BigIntegerField()
     account_created_at = models.DateTimeField(default=timezone.now)
 
-#service providers pending accounts to be verified and registered
-class PendingAccounts(models.Model):
-    service_provider_username = models.CharField(max_length=100)
-    email = models.EmailField()
+class ServiceProvider(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, related_name="service_providers")
+    first_name= models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    email = models.EmailField(unique=True)
     password = models.CharField(max_length=100)
     contact_number = models.CharField(max_length=20)
-    acc_created_at = models.DateField()
-    UEN = models.BigIntegerField()
+    acc_created_at = models.DateField(null=True)
+    UEN = models.BigIntegerField(null=True)
     office_address = models.CharField(max_length=255)
     bank_account_number = models.CharField(max_length=50)
     bank_name = models.CharField(max_length=100)
     documents_path = models.CharField(max_length=255)  # Assuming as a string
     acc_status = models.CharField(max_length=100)
 
-#service providers accounts after verfication( will automatically be added once the service provider is approved)
-class ServiceProvider(models.Model):
-    service_provider_username = models.CharField(max_length=100)
-    email = models.EmailField()
-    password = models.CharField(max_length=100)
-    contact_number = models.CharField(max_length=20)  # Assuming as a string for flexibility
-    acc_created_at = models.DateField()
-    UEN = models.BigIntegerField()
-
-
-
-class Offer(models.Model):
-    offer_id = models.AutoField(primary_key=True)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    created_at = models.DateField()
-    description = models.TextField()
-    service_provider_username = models.ForeignKey(ServiceProvider, on_delete=models.CASCADE)
-    status = models.CharField(max_length=100)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-
-
-#this table to store posts/requests published by customers
 class Post(models.Model):
-    post_id = models.AutoField(primary_key=True)
-    customer_username = models.CharField(max_length=100)
+    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
     post_category = models.CharField(max_length=100)
     created_at = models.DateField()
     number_of_bids = models.IntegerField()
     post_status = models.CharField(max_length=100)
 
+
+class Offer(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.SET_NULL, null=True)
+    created_at = models.DateField()
+    description = models.TextField()
+    service_provider = models.ForeignKey(ServiceProvider, on_delete=models.SET_NULL,  null=True)
+    status = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
 #this table for the requests/posts details
 class PostDetails(models.Model):
-    post = models.OneToOneField('Post', on_delete=models.CASCADE, primary_key=True)
+    post = models.ForeignKey(Post, on_delete=models.SET_NULL,  null=True)
     moving_category = models.CharField(max_length=100)
     moving_date = models.DateField()
     accessibility = models.CharField(max_length=100)
@@ -65,5 +70,3 @@ class PostDetails(models.Model):
     number_of_bids = models.IntegerField()
     hired_by = models.CharField(max_length=100, blank=True, null=True)
     bid_price = models.DecimalField(max_digits=10, decimal_places=2)
-
-
