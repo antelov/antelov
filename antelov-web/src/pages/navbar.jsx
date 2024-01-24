@@ -39,7 +39,7 @@ const navbar = () => {
               </button>
             ) : (
               <div className={`flex items-center space-x-3  font-poppins font-medium `}>
-                <span className="">120</span>
+                <span className="o">120</span>
                 <img src="../../src/assets/coindesignwith$ 1.svg" className="h-8 w-8" alt="" />
                 
                 <a

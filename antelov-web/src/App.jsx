@@ -14,8 +14,10 @@ import Footer from "./pages/footer";
 import Profile from "./pages/profile";
 import LandingScreen from "./pages/LandingScreen";
 import RequestSummary from "./pages/RequestSummary";
+import Historypage from "./pages/historypage";
+import SubmitRequest from "./pages/submitRequest";
 function App() {
-  const [loged, setloged] = useState(true);
+  const [loged, setloged] = useState(false);
 
   return (
     <div className="">
@@ -25,9 +27,7 @@ function App() {
             <Navbar />
           </header>
         ) : (
-          <>
-             
-          </>
+          <></>
         )}
         <main className="bg-[#FFF7F3] min-h-screen ">
           <Routes>
@@ -40,12 +40,14 @@ function App() {
             <Route path="/signupmover" element={<SignUpMover />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/requestsummary" element={<RequestSummary />} />
+            <Route path="/historypage" element={<Historypage />} />
+            <Route path="/submitRequest" element={<SubmitRequest />} />
 
             
             {/* Add a wildcard route for unmatched paths */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </BrowserRouter>
     </div>
