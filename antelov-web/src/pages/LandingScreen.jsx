@@ -1,27 +1,42 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import PrimaryButton from "../components/primaryButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 import {
   faEnvelope,
   faCheck,
   fa1,
   fa2,
   fa3,
+  faBoxesPacking,
 } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LandingScreen = () => {
+  const handleClickScroll = () => {
+    const element = document.getElementById("OurServices");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       {/*************** Header *************/}
-      <div className="p-2 px-5 mt-2 flex justify-between">
+      <div className="p-2 px-5  flex justify-between">
         <img
           src="../../src/assets/6.png"
           className="w-16 h-16  p-2 text-2xl font-semibold  "
           alt=""
         />
         <div className="flex items-center px-2 ">
-          <div className="px-5 cursor-pointer">
+          <div className="px-5 cursor-pointer " onClick={handleClickScroll}>
             <h1 className=" text-[#4B75CB] text-lg   hover:border-b-2 border-[#4B75CB] ">
               Explore our services
             </h1>
@@ -90,20 +105,46 @@ const LandingScreen = () => {
         <span className=" animate-[bounce_2s_ease-in-out_infinite] rounded-full w-16 h-16 bg-[#FFD9C7] absolute  top-56 right-0 "></span>
         <span className=" animate-[bounce_3.750s_ease-in-out_infinite] rounded-full w-10 h-10 bg-[#FE6F2E]  absolute right-72 top-24 "></span>
 
-        <span className=" animate-[bounce_2s_ease-in-out_infinite] rounded-full w-10 h-10 bg-[#FE6F2E]  absolute right-56 top-[400px]"></span>
+        <span
+          className=" animate-[bounce_2s_ease-in-out_infinite] rounded-full w-10 h-10 bg-[#FE6F2E]  absolute right-56 top-[400px]"
+          id="OurServices"
+        ></span>
         <span className=" animate-[bounce_3.750s_ease-in-out_infinite] rounded-full w-10 h-10 bg-[#FFD9C7]  absolute left-56 top-[400px]"></span>
         {/* part 2  */}
         <div className="py-20">
           <h1 className="  text-center text-[35px] font-medium  font-poppins text-[#233863] ">
             Our Services
           </h1>
+
           <div className="grid grid-cols-4  m-20">
-            <div className="bg-red-500 w-5 h-12  focus:ring  focus:ring-[#fe702eea]">
-              icon1
+            <div className="border-2 border-[#FE6F2E] flex justify-center items-center rounded-full  w-[170px] h-[170px] focus:ring  focus:ring-[#fe702eea]">
+              <FontAwesomeIcon
+                icon={faBoxesPacking}
+                size="6x"
+                color="#fe702eea"
+              />
             </div>
-            <div className="bg-red-500 w-5 h-12">icon2</div>
-            <div className="bg-red-500 w-5 h-12">icon3</div>
-            <div className="bg-red-500 w-5 h-12">icon4</div>
+            <div className="border-2 border-[#FE6F2E] flex justify-center items-center rounded-full  w-[170px] h-[170px] focus:ring  focus:ring-[#fe702eea]">
+              <FontAwesomeIcon
+                icon={faBoxesPacking}
+                size="6x"
+                color="#fe702eea"
+              />
+            </div>
+            <div className="border-2 border-[#FE6F2E] flex justify-center items-center rounded-full  w-[170px] h-[170px] focus:ring  focus:ring-[#fe702eea]">
+              <FontAwesomeIcon
+                icon={faBoxesPacking}
+                size="6x"
+                color="#fe702eea"
+              />
+            </div>{" "}
+            <div className="border-2 border-[#FE6F2E] flex justify-center items-center rounded-full  w-[170px] h-[170px] focus:ring  focus:ring-[#fe702eea]">
+              <FontAwesomeIcon
+                icon={faBoxesPacking}
+                size="6x"
+                color="#fe702eea"
+              />
+            </div>
           </div>
         </div>
         {/* part 3 */}

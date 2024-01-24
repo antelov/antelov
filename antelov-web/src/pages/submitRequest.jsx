@@ -3,7 +3,7 @@ import PrimaryButton from "../components/primaryButton";
 
 const submitRequest = () => {
   return (
-    <div className=" flex flex-row  w-screen  h-screen">
+    <div className=" flex flex-row   ">
       <div className="w-[50%] ">
         <img
           src="../../src/assets/[removal 1.svg"
