@@ -16,6 +16,8 @@ import LandingScreen from "./pages/LandingScreen";
 import RequestSummary from "./pages/RequestSummary";
 import Historypage from "./pages/historypage";
 import SubmitRequest from "./pages/submitRequest";
+import Packages from "./pages/packages";
+import Forgetpassword from "./pages/forgetpassword";
 function App() {
   const [loged, setloged] = useState(false);
 
@@ -38,12 +40,13 @@ function App() {
             <Route path="/signinmover" element={<SignInMover />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signupmover" element={<SignUpMover />} />
+            <Route path="/forgetpassword" element={<Forgetpassword />} />
+
             <Route path="/contact" element={<Contact />} />
             <Route path="/requestsummary" element={<RequestSummary />} />
             <Route path="/historypage" element={<Historypage />} />
             <Route path="/submitRequest" element={<SubmitRequest />} />
-
-            
+            <Route path="/packages" element={<Packages />} />
             {/* Add a wildcard route for unmatched paths */}
             <Route path="*" element={<NotFound />} />
           </Routes>

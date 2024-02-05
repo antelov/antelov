@@ -102,7 +102,7 @@ DATABASES = {
         "NAME": "db1",
         "USER": "admin",
         "PASSWORD": "admin123",
-        "HOST": "127.0.0.1",
+        "HOST": "192.168.1.4",
         "PORT": "5432",
     }
 }
