@@ -1,22 +1,31 @@
 const blueInput = ({ h, w, inputName ,type }) => {
   return (
-    <div className="p-3">
-      <label
-        for="first_name"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white p-2"
-      >
-        {inputName}
-      </label>
-      <input
-        type={type}
-        id="first_name"
-        class="bg-[#EAF3FA80] border-l-[1px] text-gray-900 text-sm rounded-lg   border-[#2B478BD9] block w-full p-2.5  "
-        placeholder={inputName}
-        style={{ height: `${h}px`, width: `${w}px` }}
-        required
-      />
-    </div>
+    <div class=" p-4 rounded-lg">
+         <div class="relative bg-inherit ">
+           <input
+            type="text"
+            id="username"
+             name="username"
+            class=" bg-[#EAF3FA80] border-l-[1px] border-[#2B478BD9] peer   rounded-[6px] text-gray-200 placeholder-transparent     focus:outline-none "
+             placeholder={inputName}
+             style={{ height: `${h}px`, width: `${w}px` }}
+           />
+           <label
+            for="username"
+            class="absolute cursor-text left-0 -top-3 text-sm  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown: peer-placeholder-shown:top-2 peer-focus:-top-6 peer-focus:text-sky-600 peer-focus:text-sm  pree-focus:bg-[#EAF3FA80] transition-all"
+          >
+              {inputName}
+          </label>
+       </div>
+       </div>
+
+
+    
   );
 };
 
 export default blueInput;
+
+
+
+
