@@ -19,6 +19,7 @@ import SubmitRequest from "./pages/submitRequest";
 import Packages from "./pages/packages";
 import Forgetpassword from "./pages/forgetpassword";
 import SignupMovingCompany from "./pages/signupMovingCompany";
+import Verification from "./pages/Verification";
 function App() {
   const [loged, setloged] = useState(false);
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/forgetpassword" element={<Forgetpassword />} />
             <Route path="/signupMovingCompany" element={<SignupMovingCompany />} />
 
+            <Route path="/Verification" element={<Verification />} />
 
    
             <Route path="/contact" element={<Contact />} />

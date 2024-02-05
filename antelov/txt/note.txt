@@ -1,3 +1,0 @@
-1. Get root css values from example websites
-2. Create a mysql database
-3. Replace placeholder images as necessary

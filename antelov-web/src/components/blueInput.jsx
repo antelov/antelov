@@ -6,7 +6,7 @@ const blueInput = ({ h, w, inputName ,type }) => {
             type="text"
             id="username"
              name="username"
-            class=" bg-[#EAF3FA80] border-l-[1px] border-[#2B478BD9] peer   rounded-[6px] text-gray-200 placeholder-transparent     focus:outline-none "
+            class=" bg-[#EAF3FA80] border-l-[1px] border-[#2B478BD9] peer   rounded-[10px] text-gray-200 placeholder-transparent     focus:outline-none "
              placeholder={inputName}
              style={{ height: `${h}px`, width: `${w}px` }}
            />
