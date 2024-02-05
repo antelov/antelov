@@ -18,6 +18,7 @@ import Historypage from "./pages/historypage";
 import SubmitRequest from "./pages/submitRequest";
 import Packages from "./pages/packages";
 import Forgetpassword from "./pages/forgetpassword";
+import SignupMovingCompany from "./pages/signupMovingCompany";
 function App() {
   const [loged, setloged] = useState(false);
 
@@ -41,7 +42,10 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signupmover" element={<SignUpMover />} />
             <Route path="/forgetpassword" element={<Forgetpassword />} />
+            <Route path="/signupMovingCompany" element={<SignupMovingCompany />} />
 
+
+   
             <Route path="/contact" element={<Contact />} />
             <Route path="/requestsummary" element={<RequestSummary />} />
             <Route path="/historypage" element={<Historypage />} />
